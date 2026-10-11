@@ -18,7 +18,7 @@ Priorizar cobertura e estabilidade da coleta antes de comparações de atividade
 
 O modo SQLite foi executado e oito testes passaram: determinismo, repetição de lote, correção retroativa/versão antiga, alteração de arquivo carregado, conflito de versão com rollback, chave órfã com rollback, chave duplicada e reconciliação de métricas.
 
-O teste de integração PostgreSQL está incluído e foi inicialmente ignorado no ambiente local por falta de um servidor configurado. O workflow do GitHub disponibiliza PostgreSQL 16 para executá-lo. Não declarar essa integração validada antes da execução bem-sucedida.
+O teste de integração PostgreSQL passou no GitHub Actions com PostgreSQL 16 e Python 3.12. A execução confirmou os nove testes e o comando de demonstração. [Consultar evidência da validação](https://github.com/Wenzel-Lopes/Produtividade/actions/runs/38105245050). No ambiente local, apenas os oito testes SQLite foram executados; a apresentação registra essa validação local.
 
 ## Como conferir os números
 

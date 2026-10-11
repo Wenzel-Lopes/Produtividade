@@ -14,7 +14,7 @@ Este repositório é a apresentação do projeto: não exige site, hospedagem ou
 
 [Baixar apresentação executiva de 7 slides](docs/Produtividade-Portfolio.pptx) · [Ver resultados e limitações](docs/resultados.md) · [Entender a arquitetura](docs/arquitetura.md)
 
-Oito testes locais SQLite passaram. O teste PostgreSQL está incluído, mas sua execução ainda precisa ser confirmada. A contribuição pessoal nos projetos profissionais anteriores será descrita separadamente, após confirmação do autor.
+Os nove testes passaram no GitHub Actions: oito com SQLite e um de integração com PostgreSQL 16. [Ver execução validada](https://github.com/Wenzel-Lopes/Produtividade/actions/runs/38105245050). A contribuição pessoal nos projetos profissionais anteriores será descrita separadamente, após confirmação do autor.
 
 ## O problema
 
