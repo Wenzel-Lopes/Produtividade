@@ -30,6 +30,10 @@ A página original tem 2.100 × 2.400 unidades de canvas. A organização passa 
 
 O gráfico denominado “Heatmap - Horário” no original é do tipo área no PBIP; a prévia mantém esse tipo e esse título. Os gráficos de detalhamento são esquemáticos, sem reproduzir classificações, pesos ou regras corporativas. Os índices nos cartões são exemplos visuais, não avaliações reais de pessoas.
 
+## Cores do relatório
+
+A paleta foi revisada diretamente no PBIX: linha laranja na visão diária, classificações em verde/amarelo/vermelho e cores específicas para os estados de mapeamento. [Consultar as associações verificadas](visual-bi/cores.md).
+
 ## Duas amostras com propósitos diferentes
 
 - **Prévia do layout:** cenário fictício independente, seed 77, 120 pessoas, documentado em [visual-bi](visual-bi/README.md). Sem vínculo com as medidas originais.

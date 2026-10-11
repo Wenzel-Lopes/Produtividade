@@ -80,34 +80,49 @@ def render(page):
    if t=='hundredPercentStackedAreaChart':
     # Two stacked bands, preserving the original visual type.
     points=[(px+i*pw/3,py+ph*(1-a/100)) for i,a in enumerate(sample['mapping_pct'])]
-    d.polygon([(px,py)]+[(px+pw,py)]+list(reversed(points)),fill='#cccccc')
-    d.polygon(points+[(px+pw,py+ph),(px,py+ph)],fill=BLUE)
+    d.polygon([(px,py)]+[(px+pw,py)]+list(reversed(points)),fill='#EB1E2D')
+    d.polygon(points+[(px+pw,py+ph),(px,py+ph)],fill='#29AE3F')
     for i,(cx,cy) in enumerate(points):txt(max(px+50,min(px+pw-50,cx)),cy+ph/3,str(sample['mapping_pct'][i]).replace('.',',')+'%',22,'white',True,True);txt(max(px+70,min(px+pw-70,cx)),py+ph+15,sample['companies'][i],19,center=True)
-    txt(px,py-25,'Mapeados',18,BLUE);txt(px+190,py-25,'Não mapeados',18,'#777777')
+    txt(px,py-25,'Mapeados',18,'#29AE3F');txt(px+190,py-25,'Não mapeados',18,'#EB1E2D')
     for val in [0,50,100]:txt(px-73,py+ph*(1-val/100)-10,f'{val}%',17)
    elif t=='lineStackedColumnComboChart':
     for k in [0,200,400,600,800]:
      yy=py+ph*(1-k/800);d.line((px,yy,px+pw,yy),fill=GREY);txt(px-80,yy-13,f'{k} h',18)
     pts=[]
     for i,a in enumerate(sample['daily_hours']):
-     cx=px+(i+.5)*pw/22;top=py+ph*(1-a/800);d.rectangle((cx-18,top,cx+18,py+ph),fill=LIGHT)
+     cx=px+(i+.5)*pw/22;top=py+ph*(1-a/800);d.rectangle((cx-18,top,cx+18,py+ph),fill='#33639B')
      pts.append((cx,py+ph*(1-sample['daily_index'][i]/100)))
      if i%2==0:txt(cx,py+ph+13,str(i+1).zfill(2),18,center=True)
-    d.line(pts,fill=BLUE,width=4)
+    d.line(pts,fill='#FBA324',width=4)
     for k in [0,50,100]:txt(px+pw+7,py+ph*(1-k/100)-10,f'{k}%',16,BLUE)
     txt(px+pw/2,py+ph+40,'Dias úteis fictícios • barras: horas / linha: índice ilustrativo',19,center=True)
    elif t=='areaChart':
     vals=[.08,.15,.38,.68,.83,.88,.65,.56,.76,.86,.8,.64,.32,.12]
     pts=[(px+i*pw/13,py+ph*(1-a)) for i,a in enumerate(vals)]
-    d.polygon([(px,py+ph)]+pts+[(px+pw,py+ph)],fill=LIGHT);d.line(pts,fill=BLUE,width=4)
+    for factor,col in [(1.0,'#29AE3F'),(.25,'#FBA324'),(.08,'#EB1E2D')]:
+     series=[(px+i*pw/13,py+ph*(1-a*factor)) for i,a in enumerate(vals)]
+     d.polygon([(px,py+ph)]+series+[(px+pw,py+ph)],fill=col)
+     d.line(series,fill=col,width=3)
     for i in range(14):txt(px+i*pw/13,py+ph+18,f'{i+6:02}:00',18,center=True)
-    txt(px,py-20,'Distribuição horária ilustrativa',18,BLUE)
+    for i,(name,col) in enumerate([('Produtivo','#29AE3F'),('Neutro','#FBA324'),('Improdutivo','#EB1E2D')]):
+     txt(px+i*245,py-20,name,18,col)
    else:
     labels=(['Área 1','Área 2','Área 3','Área 4'] if 'Centro' in label or label in ['Diretoria','Departamentos'] else ['Categoria A','Categoria B','Categoria C','Categoria D'])
     if label=='Ferramentas':labels=['Ferramenta A','Ferramenta B','Ferramenta C','Ferramenta D']
+    if t=='barChart':
+     legend=[('Mapeado','#94BCC4'),('Não mapeado','#FBA324'),('Máq. pessoal',BLUE),('Sem máquina','#757E8B')] if mapping else [('Produtivo','#29AE3F'),('Neutro','#FBA324'),('Improdutivo','#EB1E2D')]
+     for k,(name,col) in enumerate(legend):txt(x+25+k*(vw-50)/len(legend),y+48,name,17,col)
+     py+=35;ph-=35
     for i,lab in enumerate(labels):
      yy=py+i*ph/4;txt(x+20,yy+10,lab,20);start=x+vw*.24;value=sample['mapping_pct'][i] if mapping else 87-i*12;length=(vw*.67)*value/100
-     d.rectangle((start,yy,start+length,yy+32),fill=BLUE)
+     if t=='barChart':
+      pieces=[(.78,'#94BCC4'),(.10,'#FBA324'),(.06,BLUE),(.06,'#757E8B')] if mapping else [(.72,'#29AE3F'),(.20,'#FBA324'),(.08,'#EB1E2D')]
+      at=start
+      for share,col in pieces:
+       d.rectangle((at,yy,at+length*share,yy+32),fill=col);at+=length*share
+     else:
+      col='#29AE3F' if value>=75 else ('#3C9394' if value>=60 else '#E77517')
+      d.rectangle((start,yy,start+length,yy+32),fill=col)
      txt(start+length+9,yy+4,f'{value:g}%',18,BLUE)
     txt(x+vw/2,y+vh-38,'Valores ilustrativos • escala de 0% a 100%',18,'#888888',center=True)
  # White label outside the original canvas distinguishes reference layout from actual rendering.
