@@ -7,3 +7,9 @@ data/raw/
 .pytest_cache/
 .openai/
 node_modules/
+
+# Arquivos locais do Power BI e fontes privadas
+**/.pbi/
+*.abf
+*.pbix
+*.pbit

@@ -1,103 +1,79 @@
 # Produtividade
 
-**Portfólio demonstrativo de Análise de Dados Pleno: pessoas, custos e operação.**
+### Analytics, controle de mapeamento e engenharia de dados
 
-Dados 100% sintéticos. Código original. Sem dados, logos, medidas ou código de empresas. O case não representa ganhos reais de negócio nem substitui a descrição da sua contribuição nos projetos profissionais.
+**Wenzel Lopes · Portfólio de Análise de Dados**
 
-## Visão rápida para recrutadores
+Como analisar a operação quando parte das pessoas ainda não está mapeada e a coleta não cobre toda a jornada? O projeto conecta **leitura de negócio, cobertura dos dados e uma base técnica auditável**.
 
-Este repositório é a apresentação do projeto: não exige site, hospedagem ou GitHub Pages.
+[**Ver a galeria**](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/galeria.md) · [**Explorar o backend**](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/backend.md) · [**Entender a automação**](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/automacao.md) · [**Executar o case**](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/execucao.md)
 
-**Problema:** acompanhar pessoas e custos sem confundir ausência de coleta com ausência de atividade. **Entrega:** gerador Python, ETL incremental, SQL, testes e uma apresentação executiva. **Demonstração:** 240 vínculos fictícios e 1.272 registros mensais, com uma correção retroativa controlada.
+![Analytics operacional — reconstrução demonstrativa com dados sintéticos](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/imagens/analytics.png)
 
-![Cobertura de mapeamento na simulação, de janeiro a junho de 2025](docs/imagens/cobertura.png)
+> **Sobre as imagens:** prévias reconstruídas para o portfólio, com dados 100% sintéticos. Não são capturas do Power BI original. O projeto de referência foi inspecionado localmente; seus dados, conexões e código corporativo não estão neste repositório.
 
-[Baixar apresentação executiva de 7 slides](docs/Produtividade-Portfolio.pptx) · [Ver resultados e limitações](docs/resultados.md) · [Entender a arquitetura](docs/arquitetura.md)
+## O projeto em três frentes
 
-Os nove testes passaram no GitHub Actions: oito com SQLite e um de integração com PostgreSQL 16. [Ver execução validada](https://github.com/Wenzel-Lopes/Produtividade/actions/runs/38105245050). A contribuição pessoal nos projetos profissionais anteriores será descrita separadamente, após confirmação do autor.
+| Frente | Pergunta de negócio | Evidência para explorar |
+|---|---|---|
+| **Analytics** | Quanto foi observado da operação e qual é a base da comparação? | [Leitura dos indicadores e recortes](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/analytics.md) |
+| **Mapeamento** | Quem está coberto e onde há lacunas antes de analisar atividade? | [Cobertura e denominadores](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/mapeamento.md) |
+| **Backend e automação** | Como carregar, corrigir e conferir os números sem duplicar dados? | [ETL, SQL, modelo e testes](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/backend.md) |
 
-## O problema
+## Conheça o BI de referência
 
-Uma organização fictícia quer acompanhar headcount e custos de pessoal enquanto melhora a cobertura dos dados operacionais. A entrega conecta uma fonte reproduzível, ETL incremental auditável, regras de negócio e uma visão executiva. Atividade digital é uma proxy simulada e não deve sustentar avaliação individual de pessoas.
+O projeto Power BI fornecido para esta documentação contém **13 páginas, 125 medidas DAX e 38 relacionamentos**. São 47 tabelas, das quais 24 são calendários automáticos. Esses números descrevem o inventário local, não a quantidade de recursos implementados nesta demonstração pública.
 
-## Comece aqui (sem banco externo)
+As páginas incluem **Analytics Operacional, Analytics Comercial, Mapeamento, Visão Geral e Visão 360 Colaborador**, além de outras páginas e tooltips. A estrutura reúne Power Query, modelo semântico, medidas, navegação e papéis de segurança.
 
-Requisito: Python 3.10 ou superior. Abra o terminal na pasta deste README.
+[Ver o mapa funcional do BI e o escopo público →](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/projeto-bi.md)
 
-```powershell
-python -m produtividade demo
-python -m unittest discover -s tests -v
-python -m http.server 8000 --directory site
+## Controle de mapeamento antes da análise
+
+![Mapeamento — reconstrução demonstrativa com dados sintéticos](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/imagens/mapeamento.png)
+
+Na amostra de junho, **196 de 209 vínculos elegíveis estão mapeados (93,8%)**. O headcount no último dia é 204: são populações diferentes. O projeto evidencia essa diferença em vez de usar um denominador único para todas as perguntas.
+
+[Ver como interpretar cobertura, coleta e atividade →](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/mapeamento.md)
+
+## Do dado ao indicador
+
+```mermaid
+flowchart LR
+    A[Gerador sintético Python] --> B[Lotes JSON versionados]
+    B --> C[Validação e ETL incremental]
+    C --> D[(SQLite ou PostgreSQL)]
+    D --> E[SQL analítico e agregação Python]
+    E --> F[Indicadores CSV e JSON]
+    F --> G[Demonstração visual]
+    H[GitHub Actions] --> I[Testes SQLite e PostgreSQL]
+    I -. valida .-> C
 ```
 
-Abra `http://localhost:8000` no navegador. Encerre o servidor com Ctrl+C. Também é possível abrir `site/index.html` diretamente. No Windows, se `python` não existir mas o Python estiver instalado com o launcher, substitua `python` por `py`.
+Este fluxo é a implementação pública reproduzível. O histórico do projeto de referência registra sincronização PostgreSQL com Python, reprocessamento por janela temporal e migração para VM. [Veja a experiência, as evidências e os limites](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/automacao.md#experiência-de-automação-do-projeto-de-referência).
 
-O modo local usa apenas a biblioteca padrão. O comando `demo` gera os lotes, carrega SQLite e exporta os agregados. Executá-lo novamente não duplica registros. `data/warehouse.sqlite` guarda o banco local. `data/raw/` contém os lotes gerados; esses caminhos são ignorados pelo Git.
+| Competência demonstrada | Onde conferir no código |
+|---|---|
+| Modelagem e integridade | [DDL, chaves e restrições](https://github.com/Wenzel-Lopes/Produtividade/blob/main/sql/001_schema.sql) |
+| Carga incremental e correções | [ETL com controle de versões](https://github.com/Wenzel-Lopes/Produtividade/blob/main/produtividade/etl.py) |
+| Auditoria e reprocessamento | [Tabela etl_batches](https://github.com/Wenzel-Lopes/Produtividade/blob/main/sql/001_schema.sql) e [testes](https://github.com/Wenzel-Lopes/Produtividade/blob/main/tests/test_pipeline.py) |
+| SQL analítico | [View de indicadores PostgreSQL](https://github.com/Wenzel-Lopes/Produtividade/blob/main/sql/002_kpis_postgresql.sql) |
+| Consistência dos cálculos | [Agregação Python](https://github.com/Wenzel-Lopes/Produtividade/blob/main/produtividade/analyze.py) |
+| Integração contínua | [Workflow com PostgreSQL 16](https://github.com/Wenzel-Lopes/Produtividade/blob/main/.github/workflows/tests.yml) |
 
-## Demonstre a carga em etapas
+**Validação:** nove testes aprovados, incluindo reconciliação SQL × Python em PostgreSQL. [Consultar execução](https://github.com/Wenzel-Lopes/Produtividade/actions/runs/38105245050).
 
-Use um banco separado para observar a evolução desde o início:
+## Como avaliar este portfólio
 
-```powershell
-python -m produtividade generate
-python -m produtividade load --db data/etapas.sqlite --batch data/raw/001_base.json
-python -m produtividade load --db data/etapas.sqlite --batch data/raw/001_base.json
-python -m produtividade load --db data/etapas.sqlite --batch data/raw/002_incremental.json
-python -m produtividade export --db data/etapas.sqlite
-```
+- **Em 2 minutos:** percorra as imagens e leia as três perguntas de negócio.
+- **Em 10 minutos:** abra o [backend](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/backend.md), a [automação](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/automacao.md) e o [dicionário de métricas](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/metricas.md).
+- **Na entrevista:** peça para demonstrar uma correção retroativa, explicar o denominador da cobertura e justificar a diferença entre atividade observada e resultado de negócio.
 
-Na segunda carga aparece `already_loaded`. O lote incremental adiciona junho e corrige um fato de março em R$ 150. A versão antiga não sobrescreve a nova. Os testes verificam falha de lote inteiro quando há conflito ou chave órfã.
+## Como abrir a demonstração
 
-## PostgreSQL com Docker
+**Sem instalar ferramentas:** use **Code → Download ZIP**, extraia o pacote e abra `site/index.html`. Os filtros de mês e área funcionam com a amostra já incluída. Essa é uma demonstração HTML, não o Power BI original.
 
-Pré-requisitos adicionais: Docker com Compose e acesso para instalar `psycopg`. Use um banco demonstrativo, separado de qualquer ambiente empresarial.
-
-1. Copie `.env.example` para `.env` e substitua a senha de exemplo por uma senha local exclusiva. O Compose lê esse arquivo automaticamente.
-2. Suba o banco e instale o driver em um ambiente Python de sua escolha:
-
-```powershell
-docker compose up -d --wait
-python -m pip install -r requirements-postgres.txt
-```
-
-3. Configure `DATABASE_URL` no terminal, usando a mesma senha do `.env`. Se a senha contiver caracteres reservados de URL, aplique percent-encoding. Exemplo de estrutura no PowerShell (substitua o marcador):
-
-```powershell
-$env:DATABASE_URL = 'postgresql://produtividade:SUA_SENHA@localhost:5432/produtividade'
-python -m produtividade demo --postgres
-```
-
-No macOS/Linux, use `export DATABASE_URL='postgresql://produtividade:SUA_SENHA@localhost:5432/produtividade'`.
-
-4. Crie as views e confira a reconciliação com o teste de integração:
-
-```powershell
-$env:PRODUTIVIDADE_TEST_POSTGRES = '1'
-python -m unittest discover -s tests -v
-```
-
-O teste cria a view `vw_kpis_monthly` a partir de `sql/002_kpis_postgresql.sql` e compara os resultados com Python. Alternativamente, execute esse SQL no cliente PostgreSQL de sua preferência, depois da carga.
-
-5. Para encerrar o banco mantendo os dados: `docker compose down`. O volume é persistente. A porta está limitada a localhost. O `.env` e a URL de conexão não devem ser versionados.
-
-## Estrutura
-
-```text
-produtividade/             Gerador, conexão, ETL, agregação e interface de comando
-sql/                   DDL e view analítica PostgreSQL
-tests/                 Testes de integridade, reprocessamento e reconciliação
-docs/                  Contratos, arquitetura, Power BI e roteiro da entrevista
-reports/               JSON e CSV de indicadores sintéticos
-site/                  Portfólio estático com filtros e materiais para download
-.github/workflows/     Testes automáticos com SQLite e PostgreSQL
-compose.yaml           PostgreSQL local
-```
-
-## GitHub, passo a passo
-
-Repositório público: [Wenzel-Lopes/Produtividade](https://github.com/Wenzel-Lopes/Produtividade).
-
-1. Baixe o código pelo botão **Code → Download ZIP**, ou clone com Git:
+**Para reproduzir o backend**, com Python 3.10 ou superior:
 
 ```powershell
 git clone https://github.com/Wenzel-Lopes/Produtividade.git
@@ -106,18 +82,10 @@ python -m produtividade demo
 python -m unittest discover -s tests -v
 ```
 
-2. Consulte a aba **Actions** para acompanhar os testes automáticos de SQLite e PostgreSQL.
-3. Use o README e a apresentação executiva para apresentar o case. Não é necessário ativar GitHub Pages. A pasta `site/` contém uma demonstração local opcional.
-4. Leia `docs/entrevista.md` e descreva sua contribuição real nos projetos profissionais separadamente. Não inclua arquivos de ambientes empresariais.
+[Instruções completas, inclusive PostgreSQL →](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/execucao.md)
 
-## Leitura e limitações
+## Materiais e limites
 
-- [Métricas e dicionário](docs/metricas.md)
-- [Arquitetura e escolhas](docs/arquitetura.md)
-- [Montagem no Power BI](docs/power-bi.md)
-- [Roteiro de entrevista](docs/entrevista.md)
-- [Resultados e validação](docs/resultados.md)
+[Apresentação executiva](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/Produtividade-Portfolio.pptx) · [Resultados da simulação](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/resultados.md) · [Guia de Power BI](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/power-bi.md) · [Roteiro da entrevista](https://github.com/Wenzel-Lopes/Produtividade/blob/main/docs/entrevista.md)
 
-O site já contém a amostra agregada para abrir imediatamente. Depois de mudanças no gerador/ETL, execute `demo`/`export` e atualize a apresentação e os arquivos de download antes de publicar. A apresentação é um retrato da versão entregue, não uma conexão ao vivo com o banco.
-
-O projeto não inclui um PBIX pronto, agendamento de produção, CDC real ou regras completas de folha. A implementação é uma demonstração pequena e inspecionável, com suas limitações declaradas.
+O PBIP empresarial e seu cache não são distribuídos. Ainda não há um PBIX público nem um link de Power BI interativo. As imagens são reconstruções ilustrativas baseadas nos agregados de `reports/metrics.json`; não reproduzem todas as funcionalidades do relatório de referência. Analytics comercial, visão individual e regras corporativas não foram implementados na amostra pública. Os números simulados não representam ganhos reais, e a autoria de cada componente profissional não é presumida.
