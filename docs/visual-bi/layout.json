@@ -1,0 +1,855 @@
+{
+  "notice": "Somente geometria, tipos e títulos revisados. Sem consultas, filtros, conexões ou dados do PBIP.",
+  "pages": [
+    {
+      "name": "Mapeamento",
+      "width": 2100,
+      "height": 2400,
+      "visuals": [
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 176.67,
+            "y": 1598.33,
+            "width": 403.33,
+            "height": 160,
+            "z": 32000
+          },
+          "label": "Recente"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 842,
+            "y": 1542,
+            "width": 562,
+            "height": 56,
+            "z": 35000
+          },
+          "label": "Coleta de Atividades"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 460,
+            "width": 156.25,
+            "height": 156.25,
+            "z": 9000
+          },
+          "label": "Empresa"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 688,
+            "y": 1598,
+            "width": 403.33,
+            "height": 160,
+            "z": 33000
+          },
+          "label": "Atenção"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 842,
+            "y": 1342,
+            "width": 574.29,
+            "height": 160,
+            "z": 29000
+          },
+          "label": "Erro na Implantação"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 1.54,
+            "y": 1611.49,
+            "width": 157.14,
+            "height": 37.14,
+            "z": 24000
+          },
+          "label": "Auditoria Carga"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1756,
+            "y": 644,
+            "width": 328.33,
+            "height": 160,
+            "z": 16000
+          },
+          "label": "Não Mapeados"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 848,
+            "y": 1286,
+            "width": 562,
+            "height": 56,
+            "z": 30000
+          },
+          "label": "Implantação"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 3.33,
+            "y": 1173.33,
+            "width": 155,
+            "height": 50,
+            "z": 4000
+          },
+          "label": "__________________________"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 562,
+            "y": 644,
+            "width": 328.33,
+            "height": 160,
+            "z": 14000
+          },
+          "label": "Com Máquina"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 176.67,
+            "y": 643.33,
+            "width": 328.33,
+            "height": 160,
+            "z": 10000
+          },
+          "label": "Headcount"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 643.33,
+            "width": 155,
+            "height": 231.67,
+            "z": 11000
+          },
+          "label": "Status Mapeamento Colaborador"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 56.78,
+            "y": 1454.11,
+            "width": 38.33,
+            "height": 40,
+            "z": 26000
+          },
+          "label": ""
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1368,
+            "y": 644,
+            "width": 328.33,
+            "height": 160,
+            "z": 17000
+          },
+          "label": "Sem Máquina"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 882,
+            "y": 588,
+            "width": 482.86,
+            "height": 55.71,
+            "z": 2000
+          },
+          "label": "Mapeamento dos Usuários"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 0.11,
+            "y": 1547.2,
+            "width": 155.71,
+            "height": 34.29,
+            "z": 20000
+          },
+          "label": "Analytics"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 2356,
+            "width": 2100,
+            "height": 44,
+            "z": 39000
+          },
+          "label": ""
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 366.67,
+            "width": 155,
+            "height": 70,
+            "z": 7000
+          },
+          "label": "Centro de Custo"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 176,
+            "width": 154,
+            "height": 92,
+            "z": 13000
+          },
+          "label": "Usuário"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 882,
+            "y": 40,
+            "width": 482.86,
+            "height": 55.71,
+            "z": 38000
+          },
+          "label": "Visão Geral - Mapeamento"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1512,
+            "y": 1342,
+            "width": 572,
+            "height": 160,
+            "z": 31000
+          },
+          "label": "Cobertura de Implantação"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 31.25,
+            "height": 31.25,
+            "z": 5000
+          },
+          "label": ""
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 21.67,
+            "y": 31.67,
+            "width": 121.67,
+            "height": 83.33,
+            "z": 1000
+          },
+          "label": "Gente & Gestão"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 156.67,
+            "height": 2356.67,
+            "z": 0
+          },
+          "label": ""
+        },
+        {
+          "type": "hundredPercentStackedAreaChart",
+          "position": {
+            "x": 176,
+            "y": 96,
+            "width": 1908,
+            "height": 468,
+            "z": 37000
+          },
+          "label": "Mapeamento"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 178.33,
+            "y": 1341.67,
+            "width": 563.33,
+            "height": 160,
+            "z": 28000
+          },
+          "label": "Sucesso na Implantação"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 1.54,
+            "y": 1672.92,
+            "width": 152.86,
+            "height": 34.29,
+            "z": 18000
+          },
+          "label": "Documentação"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 275.24,
+            "width": 154.29,
+            "height": 91.43,
+            "z": 6000
+          },
+          "label": "Nome"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 0.11,
+            "y": 1732.92,
+            "width": 150,
+            "height": 32.86,
+            "z": 22000
+          },
+          "label": "Visão Geral"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1194,
+            "y": 1598,
+            "width": 403.33,
+            "height": 160,
+            "z": 34000
+          },
+          "label": "Crítica"
+        },
+        {
+          "type": "barChart",
+          "position": {
+            "x": 176,
+            "y": 822,
+            "width": 1908,
+            "height": 424,
+            "z": 12000
+          },
+          "label": "Centro de Custo"
+        },
+        {
+          "type": "tableEx",
+          "position": {
+            "x": 178,
+            "y": 1788,
+            "width": 1908,
+            "height": 554,
+            "z": 8000
+          },
+          "label": "Lista Colaboradores"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1680,
+            "y": 1598,
+            "width": 404,
+            "height": 160,
+            "z": 36000
+          },
+          "label": "Saúde"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 968,
+            "y": 644,
+            "width": 328.33,
+            "height": 160,
+            "z": 15000
+          },
+          "label": "Máquina Própria"
+        }
+      ]
+    },
+    {
+      "name": "Analytics Operacional",
+      "width": 1980,
+      "height": 3500,
+      "visuals": [
+        {
+          "type": "slicer",
+          "position": {
+            "x": 5,
+            "y": 426.25,
+            "width": 171.25,
+            "height": 143.75,
+            "z": 7000
+          },
+          "label": "Data"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 4.29,
+            "y": 2357.14,
+            "width": 177.14,
+            "height": 47.14,
+            "z": 39000
+          },
+          "label": "Auditoria Carga"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 1673.33,
+            "width": 178.75,
+            "height": 78.75,
+            "z": 46000
+          },
+          "label": "Endereço"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 1.43,
+            "y": 1402.86,
+            "width": 177.14,
+            "height": 72.86,
+            "z": 6000
+          },
+          "label": "Categoria"
+        },
+        {
+          "type": "barChart",
+          "position": {
+            "x": 197.14,
+            "y": 2454.29,
+            "width": 883.33,
+            "height": 473.33,
+            "z": 9000
+          },
+          "label": "Departamentos"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 63.81,
+            "y": 2245.56,
+            "width": 45.56,
+            "height": 40,
+            "z": 41000
+          },
+          "label": ""
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 0,
+            "y": 1534.29,
+            "width": 177.14,
+            "height": 72.86,
+            "z": 32000
+          },
+          "label": "atividade"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 973.33,
+            "y": 76.67,
+            "width": 246.67,
+            "height": 160,
+            "z": 21000
+          },
+          "label": "Horas Monitoradas"
+        },
+        {
+          "type": "pivotTable",
+          "position": {
+            "x": 1113.33,
+            "y": 2961.67,
+            "width": 846.67,
+            "height": 473.33,
+            "z": 12000
+          },
+          "label": "Atividades"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 8.57,
+            "y": 25.71,
+            "width": 161.43,
+            "height": 81.43,
+            "z": 2000
+          },
+          "label": "Gente & Gestão"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 6.25,
+            "y": 871.25,
+            "width": 177.5,
+            "height": 68.75,
+            "z": 5000
+          },
+          "label": "Centro de Custo"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 198.57,
+            "y": 77.14,
+            "width": 248.57,
+            "height": 160,
+            "z": 16000
+          },
+          "label": "Índice de Performance"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1713.33,
+            "y": 76.67,
+            "width": 246.67,
+            "height": 160,
+            "z": 31000
+          },
+          "label": "Total Mapeado"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 182.86,
+            "height": 3468.57,
+            "z": 1000
+          },
+          "label": ""
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 31.25,
+            "height": 30,
+            "z": 18000
+          },
+          "label": ""
+        },
+        {
+          "type": "barChart",
+          "position": {
+            "x": 198.57,
+            "y": 2961.43,
+            "width": 881.43,
+            "height": 474.29,
+            "z": 10000
+          },
+          "label": "Ferramentas"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 883.33,
+            "y": 0,
+            "width": 391.67,
+            "height": 68.33,
+            "z": 29000
+          },
+          "label": "Analytics Operacional"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1220,
+            "y": 76.67,
+            "width": 246.67,
+            "height": 160,
+            "z": 24000
+          },
+          "label": "Horas Monitoradas"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 5.24,
+            "y": 2452.62,
+            "width": 170,
+            "height": 46.67,
+            "z": 33000
+          },
+          "label": "Documentação"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 4.29,
+            "y": 1145.71,
+            "width": 177.14,
+            "height": 201.43,
+            "z": 8000
+          },
+          "label": "Classificação"
+        },
+        {
+          "type": "shape",
+          "position": {
+            "x": 0,
+            "y": 3456.67,
+            "width": 1980,
+            "height": 43.33,
+            "z": 45000
+          },
+          "label": ""
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 5.48,
+            "y": 2538.33,
+            "width": 170,
+            "height": 51.67,
+            "z": 37000
+          },
+          "label": "Mapeamento"
+        },
+        {
+          "type": "clusteredBarChart",
+          "position": {
+            "x": 198.33,
+            "y": 1490,
+            "width": 881.67,
+            "height": 445,
+            "z": 14000
+          },
+          "label": "Diretoria"
+        },
+        {
+          "type": "barChart",
+          "position": {
+            "x": 1113.75,
+            "y": 2453.75,
+            "width": 846.25,
+            "height": 473.75,
+            "z": 13000
+          },
+          "label": "Categorias"
+        },
+        {
+          "type": "lineStackedColumnComboChart",
+          "position": {
+            "x": 198.57,
+            "y": 257.14,
+            "width": 1761.43,
+            "height": 580,
+            "z": 11000
+          },
+          "label": "Visão Diária"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 4,
+            "y": 1930,
+            "width": 176,
+            "height": 50,
+            "z": 17000
+          },
+          "label": "____________________________"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 2.5,
+            "y": 643.75,
+            "width": 178.75,
+            "height": 82.5,
+            "z": 30000
+          },
+          "label": "Empresa"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 1.43,
+            "y": 130,
+            "width": 177.14,
+            "height": 47.14,
+            "z": 3000
+          },
+          "label": "____________________________"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 445.71,
+            "y": 187.14,
+            "width": 248.57,
+            "height": 50,
+            "z": 23000
+          },
+          "label": "Score Operacional"
+        },
+        {
+          "type": "clusteredBarChart",
+          "position": {
+            "x": 1113.33,
+            "y": 1490,
+            "width": 846.67,
+            "height": 445,
+            "z": 27000
+          },
+          "label": "Centro de Custo"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 694.29,
+            "y": 187.14,
+            "width": 248.57,
+            "height": 50,
+            "z": 25000
+          },
+          "label": "Score Operacional"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 3.75,
+            "y": 753.75,
+            "width": 177.5,
+            "height": 67.5,
+            "z": 44000
+          },
+          "label": "Chefia"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 695.71,
+            "y": 77.14,
+            "width": 248.57,
+            "height": 160,
+            "z": 22000
+          },
+          "label": "Eficiência Operacional"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 202.86,
+            "y": 257.14,
+            "width": 368.57,
+            "height": 68.57,
+            "z": 43000
+          },
+          "label": "Índice de Performance"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 1466.67,
+            "y": 76.67,
+            "width": 246.67,
+            "height": 160,
+            "z": 26000
+          },
+          "label": "Horas Monitoradas"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 447.14,
+            "y": 77.14,
+            "width": 248.57,
+            "height": 160,
+            "z": 19000
+          },
+          "label": "Aderência à Jornada"
+        },
+        {
+          "type": "tableEx",
+          "position": {
+            "x": 198.33,
+            "y": 1955,
+            "width": 1761.67,
+            "height": 411.67,
+            "z": 47000
+          },
+          "label": "Colaboradores"
+        },
+        {
+          "type": "slicer",
+          "position": {
+            "x": 3.75,
+            "y": 987.5,
+            "width": 178.75,
+            "height": 78.75,
+            "z": 4000
+          },
+          "label": "Nome"
+        },
+        {
+          "type": "cardVisual",
+          "position": {
+            "x": 197.14,
+            "y": 187.14,
+            "width": 248.57,
+            "height": 50,
+            "z": 20000
+          },
+          "label": "Score Operacional"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 941.67,
+            "y": 2385,
+            "width": 341.67,
+            "height": 68.33,
+            "z": 28000
+          },
+          "label": "Detalhe Atividades"
+        },
+        {
+          "type": "textbox",
+          "position": {
+            "x": 7.14,
+            "y": 2640.0,
+            "width": 170,
+            "height": 51.67,
+            "z": 35000
+          },
+          "label": "Visão Geral"
+        },
+        {
+          "type": "areaChart",
+          "position": {
+            "x": 198.33,
+            "y": 861.67,
+            "width": 1761.67,
+            "height": 600,
+            "z": 0
+          },
+          "label": "Heatmap - Horário"
+        }
+      ]
+    }
+  ]
+}

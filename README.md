@@ -10,7 +10,7 @@ Como analisar a operação quando parte das pessoas ainda não está mapeada e a
 
 ![Analytics operacional — reconstrução demonstrativa com dados sintéticos](docs/imagens/analytics.png)
 
-> **Sobre as imagens:** prévias reconstruídas para o portfólio, com dados 100% sintéticos. Não são capturas do Power BI original. O projeto de referência foi inspecionado localmente; seus dados, conexões e código corporativo não estão neste repositório.
+> **Sobre as imagens:** prévias construídas a partir das posições, dimensões, títulos e tipos de visuais do PBIP original, com dados fictícios. A barra lateral azul e a organização vertical vêm do relatório fornecido. A renderização é aproximada e não executa DAX; não são capturas do Power BI Desktop. O projeto de referência foi inspecionado localmente; seus dados, conexões e código corporativo não estão neste repositório.
 
 ## O projeto em três frentes
 
@@ -32,7 +32,9 @@ As páginas incluem **Analytics Operacional, Analytics Comercial, Mapeamento, Vi
 
 ![Mapeamento — reconstrução demonstrativa com dados sintéticos](docs/imagens/mapeamento.png)
 
-Na amostra de junho, **196 de 209 vínculos elegíveis estão mapeados (93,8%)**. O headcount no último dia é 204: são populações diferentes. O projeto evidencia essa diferença em vez de usar um denominador único para todas as perguntas.
+A prévia preserva os blocos do relatório: **Mapeamento dos Usuários, Implantação e Coleta de Atividades**. Os cartões mostram uma amostra visual fictícia de 120 pessoas, distinta da amostra do pipeline Python. [Abrir a página completa](docs/imagens/mapeamento-completo.png).
+
+No pipeline reproduzível, junho tem 196 de 209 elegíveis mapeados, com headcount final de 204. Essa outra amostra valida o backend e não deve ser reconciliada com os valores ilustrativos da prévia visual.
 
 [Ver como interpretar cobertura, coleta e atividade →](docs/mapeamento.md)
 
@@ -88,4 +90,4 @@ python -m unittest discover -s tests -v
 
 [Apresentação executiva](docs/Produtividade-Portfolio.pptx) · [Resultados da simulação](docs/resultados.md) · [Guia de Power BI](docs/power-bi.md) · [Roteiro da entrevista](docs/entrevista.md)
 
-O PBIP empresarial e seu cache não são distribuídos. Ainda não há um PBIX público nem um link de Power BI interativo. As imagens são reconstruções ilustrativas baseadas nos agregados de `reports/metrics.json`; não reproduzem todas as funcionalidades do relatório de referência. Analytics comercial, visão individual e regras corporativas não foram implementados na amostra pública. Os números simulados não representam ganhos reais, e a autoria de cada componente profissional não é presumida.
+O PBIP empresarial e seu cache não são distribuídos. Ainda não há um PBIX público nem um link de Power BI interativo. As imagens usam a geometria revisada em `docs/visual-bi/layout.json` e uma amostra visual independente, seed 77. O pipeline usa seed 42. A prévia não valida as medidas originais nem reproduz as interações nativas do Power BI. Analytics comercial, visão individual e regras corporativas não foram implementados na amostra pública. Os números simulados não representam ganhos reais, e a autoria de cada componente profissional não é presumida.
